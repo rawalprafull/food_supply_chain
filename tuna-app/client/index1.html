@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hyperledger Fabric Tuna Application</title>
+    <link rel="icon" href="favicon.png" type="image/gif">
+    <!-- require jquery and bootstrap scripts -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<!-- Font Awesome -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" media="screen">
+
+<link rel="stylesheet"; href="https://unpkg.com/ng-table@3.0.1/bundles/ng-table.min.css">
+<script src="https://unpkg.com/ng-table@3.0.1/bundles/ng-table.min.js"></script>
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+        crossorigin="anonymous">
+	
+    <!-- adding style here -->
+    <style type="text/css">
+        header {
+            background-color: lightgray;
+            font-size: 20px;
+            padding: 15px;
+        }
+
+        header,
+        .form-group {
+            margin-bottom: 3%;
+        }
+
+        .form-group {
+            width: 50%;
+        }
+
+        #body {
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+
+        .form-control {
+            margin: 8px;
+        }
+
+        #right_header {
+            width: 20%;
+            font-size: 15px;
+            margin-right: 0px;
+        }
+
+        #left_header {
+            margin-left: 0;
+            width: 40%;
+            display: inline-block;
+        }
+
+        #id {
+            width: 49%;
+            display: inline-block;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .progress {
+            margin: 10px;
+            width: 1000px;
+        }
+
+        #cover-spin {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: 9999;
+            display: none;
+        }
+
+        @-webkit-keyframes spin {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #cover-spin::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 48%;
+            top: 40%;
+            width: 40px;
+            height: 40px;
+            border-style: solid;
+            border-color: black;
+            border-top-color: transparent;
+            border-width: 4px;
+            border-radius: 50%;
+            -webkit-animation: spin .8s linear infinite;
+            animation: spin .8s linear infinite;
+        }
+    </style>
+</head>
+
+<body ng-app="application" ng-controller="appController">
+    <header>
+        <div id="left_header">Hyperledger Fabric supply chain Application</div>
+        <i id="right_header">Blockchain application</i>
+    </header>
+    <div class="container">
+        <div class="row">
+            <h2>Supply chain Application with IOT integration</h2>
+        </div>
+    </div>
+    <br>
+    <!--loader icon -->
+    <div id="cover-spin"></div>
+
+    <div class="bd-example bd-example-tabs">
+        <div class="row">
+            <div class="col-2">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active fas fa-user-tie" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                        role="tab" aria-controls="v-pills-home" aria-selected="true"> Alice (Supplier)</a>
+                    <a class="nav-link fas fa-user-tie" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                        role="tab" aria-controls="v-pills-profile" aria-selected="false"> Miriam (Destributor)</a>
+                    <a class="nav-link fas fa-user-tie" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile-1"
+                        role="tab" aria-controls="v-pills-profile-1" aria-selected="false"> Bob (Destributor)</a>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade active show" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active fas fa-plus-square" id="nav-home-tab" data-toggle="tab"
+                                    href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"> Create
+                                    new catch record</a>
+                                <a class="nav-item nav-link fas fa-search" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                                    role="tab" aria-controls="nav-profile" aria-selected="false"> Send shipment</a>
+                                <a class="nav-item nav-link fas fa-clipboard-list " id="nav-contact-tab" data-toggle="tab"
+                                    href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    Dashboard</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <div class="form-group">
+                                    <br>
+                                    <div class="alert alert-dark" role="alert">
+                                        Please the enter the following details for new catch record.
+                                    </div>
+                                    <br>
+                                    <form name="submitRecord" class="ng-pristine ng-invalid ng-invalid-required">
+                                        <label> Enter price :</label> <input id="recordId" class="form-control col-md-6 ng-pristine ng-untouched ng-invalid ng-invalid-required"
+                                            type="text" placeholder="Ex: 11$" ng-model="tuna.price" ng-required="true"
+                                            required="required"><br>
+                                        <label> Enter name of vessel :</label><input id="vesselId" class="form-control col-md-6 ng-pristine ng-untouched ng-invalid ng-invalid-required"
+                                            type="text" placeholder="Ex: 0239L" ng-model="tuna.vessel" ng-required="true"
+                                            required="required"><br>
+                                        <label> Enter longitude: </label><input id="longitudeId" class="form-control col-md-6  ng-pristine ng-untouched ng-invalid ng-invalid-required"
+                                            type="text" value="13.052313" disabled ng-required="true" required="required"><br>
+                                        <label> Enter latitude:</label> <input id="latitudeId" class="form-control col-md-6 ng-pristine ng-untouched ng-invalid ng-invalid-required"
+                                            type="text" value="77.624934" disabled ng-required="true" required="required"><br>
+                                        <label> Please select name of Distributor :</label>
+                                        <select class="form-control col-md-6" ng-model="tuna.holder">
+                                            <option selected value="firstchannel+Miriam"> Miriam </option>
+                                            <option value="secondchannel+Bob"> Bob </option>
+                                        </select>
+                                        <br><br>
+                                        <input id="createSubmit" type="submit" value="Create" class="btn btn-outline-primary"
+                                            ng-click="addRecord()">
+                                    </form>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <br>
+                                <div class="alert alert-dark" role="alert">
+                                    Send the shipment for specific catch Id.
+                                </div>
+                                <h5 style="color: #0975e0; margin-bottom: 2%; display: none;" id="error_query">Item
+                                    sent with shipmnet id {{shipmnet.key}}</h5>
+                                <br> <label> Please select name of Distributor :</label>
+                                <br>
+                                <div class="row">
+                                    <select class="form-control col-md-6" ng-model="ChannelUserPort" id="sentToDist">
+                                        <option selected value="firstchannel+user1+7051"> Miriam </option>
+                                        <option value="secondchannel+user1+7051"> Bob </option>
+                                    </select>
+                                    <br> &emsp;
+                                    <input id="querySubmit" type="submit" value="Query" class="btn btn-outline-primary"
+                                        ng-click="queryAllRecord_1(ChannelUserPort);">
+                                </div>
+                                <br><br>
+                                <table id="query_record" class="table table-striped table-bordered" align="center">
+                                    <tbody>
+                                        <tr>
+                                            <th>Catch Id</th>
+                                            <th>Catch Timestamp</th>
+                                            <th>Distributor</th>
+                                            <th>Status</th>
+                                            <th>Vessel</th>
+                                            <th>Catch Location <br>(Longitude, Latitude)</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        <tr ng-repeat="query_record in all_record_Alice" ng-if="query_record.shipmentstatus==''">
+                                            <td>{{query_record.Key}}</td>
+                                            <td>{{query_record.timestamp}}</td>
+                                            <td>{{query_record.distributor}}</td>
+                                            <td>{{query_record.status}}</td>
+                                            <td>{{query_record.vessel}}</td>
+                                            <td>{{query_record.location}}</td>
+                                            <td>
+                                                <input id="prodId" name="prodId" type="hidden" value="">
+                                                <span ng-show="query_record.shipmentstatus=='Sent'" class="badge badge-info">Sent({{query_record.shipmentid}})</span>
+                                                <!-- <span ng-show="query_record.ParcelStatu=='Delivered'" class="badge badge-success ng-hide"> Reached </span>
+                                <input ng-show="query_record.ParcelStatus=='New'" id="sentItem" type="submit" value="Send" class="btn btn-outline-primary ng-hide" ng-click="" onclick="sentItem()">
+                                <span ng-show="query_record.ParcelStatus=='Sent'" class="badge badge-info ng-hide"> Item sent </span> -->
+                                                <input ng-show="query_record.shipmentstatus==''" type="checkbox"
+                                                    ng-model="query_record.selected" ng-true-value="'Y'" ng-false-value="'N'">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <input align="center" id="sentItem" type="submit" value="Send" class="btn btn-outline-primary"
+                                    ng-click="sentItem(all_record_Alice)" onclick="">
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+                                <div class="form-group">
+                                    <br>
+                                    <!-- <label>Query All record</label> -->
+                                    <div class="alert alert-dark" role="alert">
+                                        Query All the catch IDs with status.
+                                    </div>
+                                    <br>
+                                    <p>
+                                        <input id="queryAllrecordSupplier" type="submit" value="Query All" class="btn btn-outline-primary"
+                                            ng-click="queryAllRecord()">
+                                    </p>
+                                </div>
+                                <!-- <p id="succTX">
+                        <h5 style="color:green;margin-bottom:2%" id="success_holder">Success! Tx ID: {{change_status}}</h5>
+                    </p> -->
+                                <table  ng-table="tableParams" show-filter="false"  class="table table-striped table-bordered" cellspacing="0" width="100%" >
+                                      <thead>
+                                                <tr>
+                                                    <th class="th-sm">Catch ID</th>
+                                                    <th class="th-sm">Catch Timestamp</th>
+                                                    <th class="th-sm">Distributor</th>
+                                                    <th class="th-sm">Status</th>
+                                                    <th class="th-sm">Vessel</th>
+                                                    <th class="th-sm">Catch Location <br>(Longitude, Latitude)</th>
+                                                    <th class="th-sm">Shipment id</th>
+                                                    <th class="th-sm">Shipment sent time</th>
+                                                    <th class="th-sm">Shipment receive time</th>
+                                                    <th class="th-sm">Shipment status</th>
+                                                </tr>
+                                        </thead>	
+				     	<tbody>
+                                     <!--   <tr>
+                                            <th>Catch ID</th>
+                                            <th>Catch Timestamp</th>
+                                            <th>Distributor</th>
+                                            <th>Status</th>
+                                            <th>Vessel</th>
+                                            <th>Catch Location <br>(Longitude, Latitude)</th>
+                                            <th>Shipment id</th>
+					    <th>Shipment sent time</th>
+					    <th>Shipment receive time</th>
+					    <th>Shipment status</th>
+                                        </tr>
+                                        ngRepeat: record in all_record -->
+                                        <tr ng-repeat="record in $data">
+                                            <td>{{record.Key}} </td>
+                                            <td>{{record.timestamp}}</td>
+                                            <td>{{record.distributor}}</td>
+                                            <td>{{record.status}}</td>
+                                            <td>{{record.vessel}}</td>
+                                            <td>{{record.location}}</td>
+                                            <td>{{record.shipmentid}}
+                                                <span ng-show="record.status=='Waste'" class="badge badge-danger">Crossed
+                                                    Threashold Temperature </span>
+                                            <!--  <span ng-show="record.shipmentstatus=='Delivered'" class="badge badge-success">
+                                                    Delivered </span> 
+                                             <span ng-if="record.status=='New' && record.ParcelStatus=='New'" class="badge badge-warning">New
+                                                    entry found item yet be sent</span> 
+                                                <span ng-if="record.status=='New' && record.shipmentstatus=='Sent'" class="badge badge-info">Shipment
+                                                  	  sent</span> -->
+                                            </td>
+					    <td>{{record.ShipmentSentTimestamp}}</td>
+					    <td>{{record.ShipmentReceiveTimestamp}}</td>
+					    <td><span class="badge badge-info">{{record.shipmentstatus}}</span></td>
+                                        </tr>
+                                    </tbody>
+				<!--	 <tfoot>
+                                            <tr>
+                                                <th>Catch ID</th>
+                                                <th>Catch Timestamp</th>
+                                                <th>Distributor</th>
+                                                <th>Status</th>
+                                                <th>Vessel</th>
+                                                <th>Catch Location <br>(Longitude, Latitude)</th>
+                                                <th>Shipment id</th>
+                                                <th>Shipment sent time</th>
+                                                <th>Shipment receive time</th>
+                                                <th>Shipment status</th>
+                                            </tr>
+                                        </tfoot>   	-->
+                                </table>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab1" role="tablist">
+                                <a class="nav-item nav-link active fas fa-search " id="nav-home-tab" data-toggle="tab"
+                                    href="#nav-home1" role="tab" aria-controls="nav-home" aria-selected="true"> Receive
+                                    shipment</a>
+                                <a class="nav-item nav-link fas fa-clipboard-list" id="nav-profile-tab" data-toggle="tab"
+                                    href="#nav-profile1" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                    Dashboard</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home1" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <br>
+                                <div class="alert alert-dark" role="alert">
+                                    Receive the shipment.
+                                </div>
+                                <br>
+                                <!-- <label>Query a Specific catch id</label> -->
+                                <br>
+                                <!--<h5 style="color: red; margin-bottom: 2%; display: none;" id="error_query_1">Error: Please enter a valid Id</h5> -->
+                                <div class="row">
+
+                                    <!-- <input id="createName_1" class="form-control col-md-6 ng-pristine ng-untouched ng-valid" type="text" placeholder="Ex: 3" ng-model="record_id"> <br> &emsp;-->
+                                    <input id="querySubmit_1" type="submit" value="Refresh" class="btn btn-outline-primary"
+                                        ng-click="queryShipment('firstchannel+user2+8051');"> </div>
+                                <br><br>
+                                <table id="query_record_1" class="table table-striped table-bordered" align="center">
+                                    <tr>
+                                        <th>Shipment Id</th>
+                                        <th>Supplier</th>
+                                        <th>Status</th>
+                                        <th>Shipment sent time</th>
+                                        <th>Shipment details</th>
+                                        <th> Action </th>
+                                    </tr>
+                                    <tr ng-repeat="query_record_receive in sent_shipment_Miriam">
+                                        <!-- ng-if="query_record_receive.shipmentstatus=='Sent'"> -->
+                                        <td>{{query_record_receive.shipmentid}}</td>
+                                        <td>{{query_record_receive.Supplier}}</td>
+                                        <td>{{query_record_receive.status}}</td>
+                                        <td>{{query_record_receive.ShipmentSentTimestamp}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary fas fa-shipping-fast"
+                                                data-toggle="modal" data-target="#MiriamModal" />
+                                        </td>
+                                        <td>
+                                            <input ng-if="query_record_receive.shipmentstatus=='Sent' && query_record_receive.status=='New'"
+                                                id="receiveItemMiriam" type="submit" value="Received" class="default btn btn-outline-primary"
+                                                ng-click="receiveShipmentMiriam(shipment_tuna_Miriam)" onclick="">
+                                            
+                                            <input id="confirmShipmentMiriam" type="submit" value="Confirm" class="default btn btn-outline-primary"
+                                            ng-click="changeStatusMiriam(shipment_tuna_Miriam)" onclick="">
+			
+				   <span ng-if="query_record.shipmentstatus=='Delivered' && query_record.status=='Fresh'" class="badge badge-success">
+                                                    Confirmed success </span>		    	
+                                                
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <input id="receiveShipmentMiriam" value="firstchannel+user2+8051+8053" hidden>
+                            <!--start modal of list  tuna for miriam --->
+                            <div class="modal" id="MiriamModal">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Shipment details</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- Modal body -->
+
+                                        <div class="modal-body">
+                                            <table id="tuna_shipment_record_Miriam" class="table table-striped table-bordered"
+                                                style="width:100%" align="center">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Catch ID</th>
+                                                        <th>Catch Timestamp</th>
+                                                        <th>Supplier</th>
+                                                        <th>Status</th>
+                                                        <th>Vessel</th>
+                                                        <th>Catch Location <br>(Longitude, Latitude)</th>
+                                                        <th>Price</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="tuna_shipment_record_Miriam in shipment_tuna_Miriam">
+                                                        <!-- ng-if="tuna_shipment_record_Miriam.shipmentstatus=='Sent'"> -->
+                                                        <td>{{tuna_shipment_record_Miriam.Key}}</td>
+                                                        <td>{{tuna_shipment_record_Miriam.timestamp}}</td>
+                                                        <td>{{tuna_shipment_record_Miriam.Supplier}}</td>
+                                                        <td>{{tuna_shipment_record_Miriam.status}}</td>
+                                                        <td>{{tuna_shipment_record_Miriam.vessel}}</td>
+                                                        <td>{{tuna_shipment_record_Miriam.location}}</td>
+                                                        <td>{{tuna_shipment_record_Miriam.price}}</td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END modal list of tuna for miriam --->
+
+
+                            <div class="tab-pane fade" id="nav-profile1" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <br>
+                                <div class="alert alert-dark" role="alert">
+                                    Query All the catch IDs with shipment status.
+                                </div>
+                                <div class="form-group">
+                                    <br>
+                                    <!--  <label>Query All record</label> -->
+                                    <p>
+                                        <button id="queryAllrecord_1" type="submit" value="firstchannel" class="btn btn-outline-primary"
+                                            ng-click="queryAllRecord_1('firstchannel+user2+8051')">Query all</button>
+                                    </p>
+                                </div>
+                                <!-- <p id="succTX_1">
+                                        <h5 style="color:rgb(0, 112, 0);margin-bottom:2%" id="success_holder_1">Success! Tx ID: {{change_status}}</h5>
+                                triped table-bordered/p> -->
+                                <table id="all_record_Miriam" ng-table="tableParamsMiriam"  show-filter="false" class="table table-striped table-bordered" style="width:100%"
+                                    align="center">
+                                    <thead>
+                                        <tr>
+                                            <th>Catch ID</th>
+                                            <th>Catch Timestamp</th>
+                                            <th>Supplier</th>
+                                            <th>Status</th>
+                                            <th>Vessel</th>
+                                            <th>Catch Location <br>(Longitude, Latitude)</th>
+                                            <th>Shipment id</th>
+                                            <th>Shipment sent time</th>
+                                            <th>Shipment receive time</th>
+                                            <th>Shipment status</th>
+					</tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="record_1 in $data">
+                                            <td>{{record_1.Key}}</td>
+                                            <td>{{record_1.timestamp}}</td>
+                                            <td>{{record_1.Supplier}}</td>
+                                            <td>{{record_1.status}}</td>
+                                            <td>{{record_1.vessel}}</td>
+                                            <td>{{record_1.location}}</td>
+					    <td>{{record_1.shipmentid}}</td>
+                                            <td>{{record_1.ShipmentSentTimestamp}}</td>
+                                            <td>{{record_1.ShipmentReceiveTimestamp}}</td>
+                                            <td>
+                                                <span ng-show="record_1.status=='Waste'" class="badge badge-danger">Crossed
+                                                    Threashold Temperature </span>
+                                                <span ng-show="record_1.status=='Fresh'" class="badge badge-success">
+                                                    Received </span>
+                                                <span ng-if="record_1.shipmentstatus=='Sent' && record_1.status=='New'"
+                                                    class="badge badge-info">Shipment in transit</span>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile-1" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab1" role="tablist">
+                                <a class="nav-item nav-link active fas fa-search " id="nav-home-tab" data-toggle="tab"
+                                    href="#nav-home2" role="tab" aria-controls="nav-home" aria-selected="true"> Receive
+                                    shipment</a>
+                                <a class="nav-item nav-link fas fa-clipboard-list" id="nav-profile-tab" data-toggle="tab"
+                                    href="#nav-profile2" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                    Dashboard</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home2" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <br>
+                                <div class="alert alert-dark" role="alert">
+                                    Receive the shipment.
+                                </div>
+                                <br>
+                                <!-- <label>Query a Specific catch id</label> 
+                    <br>
+ 			<h5 style="color: red; margin-bottom: 2%; display: none;" id="error_query_1">Error: Please enter a valid Id</h5> -->
+                                <div class="row">
+
+                                    <!--                    <input id="createName_1" class="form-control col-md-6 ng-pristine ng-untouched ng-valid" type="text" placeholder="Ex: 3" ng-model="record_id"> <br> &emsp; -->
+                                    <input id="querySubmit_1" type="submit" value="Refresh" class="btn btn-outline-primary"
+                                        ng-click="queryShipment('secondchannel+user3+9051');"> </div>
+                                <br><br>
+                                <table id="bob_query_record_receive" class="table table-striped table-bordered" align="center">
+                                    <tr>
+                                        <th>Shipment Id</th>
+                                        <th>Supplier</th>
+                                        <th>Status</th>
+                                        <th>Shipment sent time</th>
+                                        <th>Shipment details</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr ng-repeat="bob_query_record_receive in sent_shipment_Bob" ng-if="bob_query_record_receive.shipmentstatus=='Sent'">
+                                        <td>{{bob_query_record_receive.shipmentid}}</td>
+                                        <td>{{bob_query_record_receive.Supplier}}</td>
+                                        <td>{{bob_query_record_receive.status}}</td>
+                                        <td>{{bob_query_record_receive.ShipmentSentTimestamp}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary fas fa-shipping-fast"
+                                                data-toggle="modal" data-target="#BobModal" />
+                                        </td>
+                                        <td>
+                                            <input ng-if="bob_query_record_receive.shipmentstatus=='Sent' && bob_query_record_receive.status=='New'"
+                                                id="receiveItem" type="submit" value="Received" class="default btn btn-outline-primary" ng-hide="hiddenMiriamBob" ng-class="{fade: startFadeBobReceive}"
+                                                ng-click="receiveShipmentBob(shipment_tuna_Bob)" onclick="stopIOT()">
+						
+						<input id="confirmShipmentBob" type="submit" value="Confirm" class="default btn btn-outline-primary" ng-hide="hiddenBobConfirm" ng-class="{fade: startFadeBobConfirm}"
+                                            ng-click="changeStatusBob(shipment_tuna_Bob)" onclick="stopIOT()">
+						
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <input id="receiveShipmentBob" value="secondchannel+user3+9051+9053" hidden>
+                            <!--start modal of list  tuna for Bob --->
+                            <div class="modal" id="BobModal">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Shipment details</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <!-- Modal body -->
+
+                                        <div class="modal-body">
+                                            <table id="tuna_shipment_record_Miriam" class="table table-striped table-bordered"
+                                                style="width:100%" align="center">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Catch ID</th>
+                                                        <th>Catch Timestamp</th>
+                                                        <th>Supplier</th>
+                                                        <th>Status</th>
+                                                        <th>Vessel</th>
+                                                        <th>Catch Location <br>(Longitude, Latitude)</th>
+                                                        <th>Price</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="tuna_shipment_record_Bob in shipment_tuna_Bob" ng-if="tuna_shipment_record_Bob.shipmentstatus=='Sent'">
+                                                        <td>{{tuna_shipment_record_Bob.Key}}</td>
+                                                        <td>{{tuna_shipment_record_Bob.timestamp}}</td>
+                                                        <td>{{tuna_shipment_record_Bob.Supplier}}</td>
+                                                        <td>{{tuna_shipment_record_Bob.status}}</td>
+                                                        <td>{{tuna_shipment_record_Bob.vessel}}</td>
+                                                        <td>{{tuna_shipment_record_Bob.location}}</td>
+                                                        <td>{{tuna_shipment_record_Bob.price}}</td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END modal list of tuna for miriam --->
+
+
+
+
+
+                            <div class="tab-pane fade" id="nav-profile2" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <br>
+                                <div class="alert alert-dark" role="alert">
+                                    Query All the catch IDs with shipment status.
+                                </div>
+                                <div class="form-group">
+                                    <br>
+                                    <!--  <label>Query All record</label> -->
+                                    <p>
+                                        <input id="queryAllrecord_1" type="submit" value="Query all" class="btn btn-outline-primary"
+                                            ng-click="queryAllRecord_1('secondchannel+user3+9051')">
+                                    </p>
+                                </div>
+                                <!-- <p id="succTX_1">
+                                        <h5 style="color:rgb(0, 112, 0);margin-bottom:2%" id="success_holder_1">Success! Tx ID: {{change_status}}</h5>
+                                triped table-bordered/p> -->
+                                <table id="all_record_1" ng-table="tableParamsBob"  show-filter="false"  class="table table-striped table-bordered" style="width:100%"
+                                    align="center">
+                                    <thead>
+                                        <tr>
+                                            <th>Catch ID</th>
+                                            <th>Catch Timestamp</th>
+                                            <th>Supplier</th>
+                                            <th>Status</th>
+                                            <th>Vessel</th>
+                                            <th>Catch Location <br>(Longitude, Latitude)</th>
+					    <th>Shipment id</th>
+                                            <th>Shipment sent time</th>
+                                            <th>Shipment receive time</th>
+                                            <th>Shipment status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr ng-repeat="record_1 in $data">
+                                            <td>{{record_1.Key}}</td>
+                                            <td>{{record_1.timestamp}}</td>
+                                            <td>{{record_1.Supplier}}</td>
+                                            <td>{{record_1.status}}</td>
+                                            <td>{{record_1.vessel}}</td>
+                                            <td>{{record_1.location}}</td>
+					    <td>{{record_1.shipmentid}}</td>
+                                            <td>{{record_1.ShipmentSentTimestamp}}</td>
+                                            <td>{{record_1.ShipmentReceiveTimestamp}}</td>
+                                            <td>
+                                                <span ng-show="record_1.status=='Waste'" class="badge badge-danger">Crossed
+                                                    Threashold Temperature </span>
+                                                <span ng-if="record_1.status=='Fresh' && record_1.shipmentstatus == 'Delivered'" class="badge badge-success">
+                                                    Received </span>
+                                                <span ng-if="record_1.shipmentstatus=='Sent' && record_1.status=='New'"
+                                                    class="badge badge-info">Shipment in transit</span>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   	
+    <script src="./bootstrap-notify.js"></script>	
+    <script src="./sensorIOT/js/fastclick.js"></script>
+    <script type="text/javascript" src="app.js"> </script>
+    <script type="text/javascript" src="./sensorIOT/js/mqttws31.js"></script>
+    <script src="./sensorIOT/js/main.js"></script>
+<!--
+   <!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/css/mdb.min.css" rel="stylesheet">
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/js/mdb.min.js"></script>	
+-->
+</body>
+    <script>
+	
+	$(document).ready(function () {
+	     // <!--  $('#dtBasicExample').DataTable();
+ 	    //	 $('.dataTables_length').addClass('bs-select');	-->
+	});
+        function startReadIOTApp(queryRecordId, callback) {
+            angular.element(document.getElementById('query_record')).scope().startReadingTempIOT(query_record);
+            console.log('started reading temp');
+            callback();
+        }
+
+        function sentItemfunction(queryRecordId, callback) {
+            angular.element(document.getElementById('query_record')).scope().sentItem(query_record);
+            console.log('updating item sent');
+            callback();
+        }
+
+
+        function sentItem() {
+            var queryRecordId = $('#prodId').val();
+            console.log(queryRecordId);
+            sentItemfunction(queryRecordId, function () {
+                startReadIOTApp(queryRecordId, function (queryRecordId) {
+                    // printList(callback);
+                });
+            });
+        }
+
+
+    </script>
+
+</html>

@@ -1,0 +1,10 @@
+#!/bin/bash 
+
+#on displays the actual folder name 
+echo "the folder is 'pwd':" 
+pwd 
+
+#then the rest of the files 
+echo "The folder which contains files are 'ls'"
+ls
+

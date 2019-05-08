@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blockchain & IOT</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
+		<link href="../css/style.css" rel="stylesheet">	
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script  src="../app.js"></script>
+
+	</head>
+	<body ng-app="application" ng-controller="appController" >
+	
+	<div class="container-fluid">
+	
+		<!-- Header Section starts here-->
+		<header class="header_bg">
+			<div class="header_left"></div>
+			<div class="header_right"></div>
+			
+			<div class="container">
+				<div class="logo_pharma">
+					<a href="#"><img src="../images/logo.png" alt="logo"/></a>
+				</div>
+				<div class="banner_text_right">
+					Blockchain for Business<br><b>WITH IBM BLOCKCHAIN</b>
+				</div>
+			</div>
+
+		</header> 
+		<!-- Header Section ends here-->
+		
+		
+		<!-- Content Section ends here-->
+		<div class="student_id_content">
+	  		<div class="container">
+  				<div class="signout">
+					<a href="./supplier.html"><img src="../images/sign_out_btn.png" alt=""/></a>
+				</div>
+  			</div>
+		  	<h2><b>Supplier</b></h2>
+		  	<p><a href="#"></a></p>
+		</div>
+		<div class="student_id_forms">
+		<div class="container">
+				<!--loader icon -->
+	    	<div id="cover-spin"></div>
+
+		<nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active fas fa-plus-square" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"> Create new catch record</a>
+                    <a class="nav-item nav-link fas fa-search" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"> Send shipment</a>
+                    <a class="nav-item nav-link fas fa-clipboard-list " id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"> Dashboard</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="form-group">
+			<br> 
+				<div class="alert alert-dark" role="alert">
+					Please the enter the following details for new catch record.  
+				</div>
+			<br>
+                        <form name="submitRecord">
+		    	   <label> Enter unique catch id :</label> <input id="recordId" class="form-control col-md-6" type="text" placeholder="Ex: 11" ng-model="tuna.id" ng-required="true"><br>
+                           <label> Enter name of vessel :</label><input id="vesselId" class="form-control col-md-6" type="text" placeholder="Ex: 0239L" ng-model="tuna.vessel" ng-required="true"><br>
+			   <label> Enter longitude: </label><input id="createName" class="form-control col-md-6 " type="text" placeholder="Ex: 28.012" ng-model="tuna.longitude" ng-required="true"><br> 
+                           <label> Enter latitude:</label> <input id="createName" class="form-control col-md-6" type="text" placeholder="Ex: 150.405" ng-model="tuna.latitude" ng-required="true"><br>
+                           <label> Enter name of holder :</label><input id="holderId" class="form-control col-md-6" type="text" placeholder="Ex: Hansel" ng-model="tuna.holder" ng-required="true"><br>
+                            <br>
+                            <input id="createSubmit" type="submit" value="Create" class="btn btn-outline-primary" ng-click="addRecord()">
+                        </form>
+                    </div>
+
+                </div>
+               <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+		<br>
+			<div class="alert alert-dark" role="alert">
+				  Send the shipment for specific catch Id.
+		   	 </div>
+			<h5 style="color:red;margin-bottom:2%" id="error_query">Error: Please enter a valid Id</h5>
+		    <br>
+                    <label>Query a Specific catch Id</label>
+                    <br>
+		    <div class="row">
+                    	<input id="createName" class="form-control col-md-6" type="text" placeholder="Ex: 3" ng-model="tuna_id">
+                    	<br> &emsp;
+		   	 <input id="querySubmit" type="submit" value="Query" class="btn btn-outline-primary" ng-click="queryRecord();">
+                    </div>	
+		    <br><br>
+                    <table id="query_record" class="table table-striped table-bordered" align="center">
+                        <tr dir-paginate="query_record in query_record | orderBy:sortKey:reverse|filter:search|itemsPerPage:5" >
+                            <th>Id</th>
+                            <th>Timestamp</th>
+                            <th>Holder</th>
+                            <th>Status</th>
+                            <th>Vessel</th>
+			    <th>Catch Location <br>(Longitude, Latitude)</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>{{query_record.Key}}</td>
+                            <td>{{query_record.timestamp}}</td>
+                            <td>{{query_record.holder}}</td>
+                            <td>{{query_record.status}}</td>
+                            <td>{{query_record.vessel}}</td>
+			    <td>{{query_record.location}}</td>
+                            <td>
+                        <input id="prodId" name="prodId" type="hidden" value="{{query_record.Key}}">
+                                <!-- <span ng-show="query_record.status=='Waste'" class="badge badge-danger">Crossed Threashold Temperature</span> -->
+                                <span ng-show="query_record.ParcelStatus=='Delivered'" class="badge badge-success"> Reached </span>
+                                <input ng-show="query_record.ParcelStatus=='New'" id="sentItem" type="submit" value="Send" class="btn btn-outline-primary" ng-click="" onclick="sentItem()">
+                                <span ng-show="query_record.ParcelStatus=='Sent'" class="badge badge-info"> Item sent </span>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+                    <div class="form-group">
+                        <br>
+		<!-- <label>Query All record</label> -->
+			<div class="alert alert-dark" role="alert">
+                                 Query All the catch IDs with status.
+                   	 </div>
+			<br>
+                        <p>
+                            <input id="queryAllrecord" type="submit" value="Query All" class="btn btn-outline-primary" ng-click="queryAllRecord()">
+                        </p>
+                    </div>
+                    <!-- <p id="succTX">
+                        <h5 style="color:green;margin-bottom:2%" id="success_holder">Success! Tx ID: {{change_status}}</h5>
+                    </p> -->
+                    <table ng-table="userTable" class="table table-striped table-bordered">
+                        <tr>
+                            <th ng-click="sort('Key')"  >ID</th>
+                            <th>Timestamp</th>
+                            <th>Holder</th>
+                            <th>Status</th>
+                            <th>Vessel</th>
+			    <th>Catch Location <br>(Longitude, Latitude)</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr ng-repeat="record in all_record">
+                            <td>{{record.Key}} </td>
+                            <td>{{record.timestamp}}</td>
+                            <td>{{record.holder}}</td>
+                            <td>{{record.status}}</td>
+                            <td>{{record.vessel}}</td>
+			    <td>{{record.location}}</td>	
+                            <td>
+                                <span ng-show="record.status=='Waste'" class="badge badge-danger">Crossed Threashold Temperature </span>
+                                <span ng-show="record.status=='Fresh'" class="badge badge-success"> Delivered </span>
+                                <span ng-if="record.status=='New' && record.ParcelStatus=='New'" class="badge badge-warning">New entry found item yet be sent</span>
+				<span ng-if="record.status=='New' && record.ParcelStatus=='Sent'" class="badge badge-info">Item sent</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+	
+</div>
+</div>
+</div>
+<!-- Content Section ends here-->
+
+<script src="../sensorIOT/js/fastclick.js"></script>
+<script type="text/javascript" src="../sensorIOT/js/mqttws31.js"></script>
+<script src="../sensorIOT/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="../bootstrap-notify.js"></script>
+
+<!-- Footer Section starts here-->
+<footer class="footer">©  copyright 2018</footer>
+<!-- Footer Section ends here-->
+</div>
+</body>
+
+<script>
+
+
+	
+    function startReadIOTApp(queryRecordId,callback) {
+        angular.element(document.getElementById('query_record')).scope().startReadingTempIOT(query_record);
+	console.log('started reading temp');
+        callback();
+    }
+
+    function sentItemfunction(queryRecordId,callback) {
+        angular.element(document.getElementById('query_record')).scope().sentItem(query_record);
+        console.log('updating item sent');
+        callback();
+    }
+
+
+    function sentItem(){
+      	var queryRecordId = $('#prodId').val();			
+	console.log(queryRecordId);
+	  sentItemfunction(queryRecordId,function() {
+            startReadIOTApp(queryRecordId,function(queryRecordId) {
+           // printList(callback);
+            });
+        });
+       }	
+    
+
+    $('#sentItem').click(function(){
+        var btn = $(this);
+        btn.prop('disabled', true);
+        setTimeout(function(){
+        btn.prop('disabled', false);
+        }, 10*1000);
+    }); 
+
+	$('#myTab a').on('click', function (e) {
+ 		 e.preventDefault()
+		  $(this).tab('show')
+    });
+   </script>	    
+
+</html>
+

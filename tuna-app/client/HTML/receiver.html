@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Student Digital ID</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">	
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"crossorigin="anonymous">
+	        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+
+	<body ng-app="application" ng-controller="appController">
+
+	<!--spinner icon -->
+        <div id="cover-spin"></div>
+
+		
+	<div class="container-fluid">
+	
+		<!-- Header Section starts here-->
+		<header class="header_bg">
+			<div class="header_left"></div>
+			<div class="header_right"></div>
+			
+			<div class="container">
+				<div class="logo_pharma">
+					<a href="#"><img src="../images/logo.png" alt="logo"/></a>
+				</div>
+				
+				<div class="banner_text_right">
+					Blockchain for Business<br><b>WITH IBM BLOCKCHAIN</b>
+				</div>
+			</div>
+
+		</header> 
+		<!-- Header Section ends here-->
+		
+		
+		<!-- Content Section ends here-->
+		<div class="student_id_banner">
+		  	<div class="login_form agent">
+		  		<h3 id="loginfailedAlert"><b>Distributor </b> Login</h3>
+		  		<div class="field_login">
+		  			<span><img src="../images/login_icon01.png" alt=""/></span>
+		  			<input type="text" placeholder="Enter User Name" ng-model="login.username">
+		  		</div>
+		  		
+		  		<div class="field_login">
+		  			<span><img src="../images/login_icon02.png" alt=""/></span>
+		  			<input type="password" placeholder="Enter Password" ng-model="login.passwd">
+		  		</div>
+		  		
+		  		<div class="field_login">
+		  			<input type="button" value="Login" ng-click="loginUser()" >
+					
+		  		</div>
+				  <div class="field_login">
+		  			 <a href="../index.html" align="center"> Back</a>  
+				</div>
+		  	</div>
+
+		</div>
+		<!-- Content Section ends here-->
+
+
+		<!-- Footer Section starts here-->
+		<footer class="footer">©  copyright 2018</footer>
+		<!-- Footer Section ends here-->
+		
+	</div>
+	</body>
+	
+	<!-- scrips-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="../bootstrap-notify.js"></script>
+	<script type="text/javascript" src="../app.js"> </script>
+</html>
+

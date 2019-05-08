@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="css/bootstrap-3.3.7.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="container-fluid"> 
+  
+  <!-- Header Section starts here-->
+  <header class="header_bg">
+    <div class="header_left"></div>
+    <div class="header_right"></div>
+    <div class="container">
+      <div class="logo_pharma"> <a href="#"><img src="images/logo.png" alt="logo"/></a> </div>
+      <div class="banner_text_right"> Blockchain for Business<br>
+        <b>WITH IBM BLOCKCHAIN</b> </div>
+    </div>
+  </header>
+  <!-- Header Section ends here-->
+  
+  <div class="wrapper"> 
+    
+    <!-- Content Section starts here-->
+    <section class="content_area">
+      <div class="left_submenu col-md-2">
+        <ul>
+          <li href="#supplier" onclick="openCity(event, 'supplier')"  id="defaultOpen" class="tablinks"><a>Alice (Supplier)</a></li>
+          <li href="#distributor-1" onclick="openCity(event, 'distributor-1')" class="tablinks" ><a>Miriam (Distributor)</a></li>
+          <li href="#distributor-2" onclick="openCity(event, 'distributor-2')" class="tablinks"><a>Bob (Distributor)</a></li>
+        </ul>
+      </div>
+
+
+      <!--Supplier start here-->
+      <div class="right_content_block col-md-9 tabcontent" id="supplier">
+          <h2>Space for header text</h2>
+          <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#sup-home1" data-toggle="tab" role="tab" aria-controls="tab1">Create new catch record</a></li>
+              <li role="presentation"><a href="#sup-paneTwo1" data-toggle="tab" role="tab" aria-controls="tab2">Send shipment</a></li>
+              <li role="presentation"><a href="#sup-paneTwo2" data-toggle="tab" role="tab" aria-controls="tab3">Dashboard</a></li>
+            </ul>
+            <div id="tabContent1" class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="sup-home1">
+                <div class="info" >Please enter the following details for the new catch record</div>
+                <span class="fields_design col-md-6">
+                <label>Enter price</label>
+                <input type="text" value="EX:11$"/>
+                </span> <span class="fields_design col-md-6">
+                <label>Enter name of vessel</label>
+                <input type="text" value="EX:0239L"/>
+                </span> <span class="fields_design col-md-6">
+                <label>Enter longitude</label>
+                <input class="nonactive" type="text" value="13.052313"/>
+                </span> <span class="fields_design col-md-6">
+                <label>Enter latitude</label>
+                <input class="nonactive" type="text" value="77.624934"/>
+                </span> <span class="fields_design col-md-6">
+                <label>Please select name of distributor</label>
+                <select>
+                  <option>Select</option>
+                  <option value="saab">Option 1</option>
+                </select>
+                </span>
+                <div class="clearfix"></div>
+                <div class="submit_block">
+                  <input type="button" value="Create" class="submit_btn_cmn"/>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="sup-paneTwo1">
+                <div class="info" >Send the shipment</div>
+                <span class="fields_design col-md-6">
+                <label>Please select name of distributor</label>
+                </span>
+                <div class="clearfix"></div>
+                <span class="fields_design col-md-6">
+                <select>
+                  <option>Select</option>
+                  <option value="saab">Option 1</option>
+                </select>
+                </span> <span class="fields_design col-md-6">
+                <input type="button" value="Query" class="submit_btn_cmn"/>
+                </span>
+                <div class="clearfix"></div>
+                <table width="100%">
+                  <tbody>
+                    <tr>
+                      <th>Catch ID</th>
+                      <th>Catch Timestamp</th>
+                      <th>Distributor</th>
+                      <th>Status</th>
+                      <th>Vessel</th>
+                      <th>Catch location (Longitude, Latitude)</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="clearfix"></div>
+                <div class="submit_block">
+                  <input type="button" value="Send" class="submit_btn_cmn"/>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="sup-paneTwo2">
+                <div class="info" >Query all the catch IDs with status</div>
+                <div class="clearfix"></div>
+                <span class="fields_design col-md-6">
+                <input type="button" value="Query All" class="submit_btn_cmn"/>
+                </span>
+                <div class="clearfix"></div>
+                <table width="100%">
+                  <tbody>
+                    <tr>
+                      <th>Catch ID</th>
+                      <th>Catch Timestamp</th>
+                      <th>Distributor</th>
+                      <th>Status</th>
+                      <th>Vessel</th>
+                      <th>Catch location (Longitude, Latitude)</th>
+                      <th>Shipment ID</th>
+                      <th>Shipment sent time</th>
+                      <th>Shipment received time</th>
+                      <th>Shipment status</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--Supplier ends here -->
+
+
+      <!--Distributor-1 start here-->
+      <div class="right_content_block col-md-9 tabcontent" id="distributor-1">
+          <h2>Space for header text</h2>
+          <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#dist-home2" data-toggle="tab" role="tab" aria-controls="tab1">Receive shipment</a></li>
+              <li role="presentation"><a href="#dist-paneTwo2" data-toggle="tab" role="tab" aria-controls="tab2">Dashboard</a></li>
+            </ul>
+            <div id="tabContent1" class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="dist-home2">
+                <div class="info" >Receive the shipment</div>
+                <div class="clearfix"></div>
+                <span class="fields_design col-md-6">
+                <input type="button" value="Refresh" class="submit_btn_cmn"/>
+                </span>
+                <div class="clearfix"></div>
+                <table width="100%">
+                  <tbody>
+                    <tr>
+                      <th>Shipment ID</th>
+                      <th>Supplier</th>
+                      <th>Status</th>
+                      <th>Shipment sent time</th>
+                      <th>Shipment details</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="clearfix"></div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="dist-paneTwo2">
+                <div class="info" >Query all the catch IDs with shipment status</div>
+                <div class="clearfix"></div>
+                <span class="fields_design col-md-6">
+                <input type="button" value="Query All" class="submit_btn_cmn"/>
+                </span>
+                <div class="clearfix"></div>
+                <table width="100%">
+                  <tbody>
+                    <tr>
+                      <th>Catch ID</th>
+                      <th>Catch Timestamp</th>
+                      <th>Supplier</th>
+                      <th>Status</th>
+                      <th>Vessel</th>
+                      <th>Catch location (Longitude, Latitude)</th>
+                      <th>Shipment ID</th>
+                      <th>Shipment sent time</th>
+                      <th>Shipment received time</th>
+                      <th>Shipment status</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!--Distributor-1 ends here-->
+
+
+      <!--Distributor-2 start here-->
+      <div class="right_content_block col-md-9 tabcontent" id="distributor-2">
+          <h2>Space for header text</h2>
+          <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#dist-home3" data-toggle="tab" role="tab" aria-controls="tab1">Receive shipment</a></li>
+              <li role="presentation"><a href="#dist-paneTwo3" data-toggle="tab" role="tab" aria-controls="tab2">Dashboard</a></li>
+            </ul>
+            <div id="tabContent1" class="tab-content">
+              <div role="tabpanel" class="tab-pane fade in active" id="dist-home3">
+                <div class="info" >Receive the shipment</div>
+                <div class="clearfix"></div>
+                <span class="fields_design col-md-6">
+                <input type="button" value="Refresh" class="submit_btn_cmn"/>
+                </span>
+                <div class="clearfix"></div>
+                <table width="100%">
+                  <tbody>
+                    <tr>
+                      <th>Shipment ID</th>
+                      <th>Supplier</th>
+                      <th>Status</th>
+                      <th>Shipment sent time</th>
+                      <th>Shipment details</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="clearfix"></div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="dist-paneTwo3">
+                <div class="info" >Query all the catch IDs with shipment status</div>
+                <div class="clearfix"></div>
+                <span class="fields_design col-md-6">
+                <input type="button" value="Query All" class="submit_btn_cmn"/>
+                </span>
+                <div class="clearfix"></div>
+                <table width="100%">
+                  <tbody>
+                    <tr>
+                      <th>Catch ID</th>
+                      <th>Catch Timestamp</th>
+                      <th>Supplier</th>
+                      <th>Status</th>
+                      <th>Vessel</th>
+                      <th>Catch location (Longitude, Latitude)</th>
+                      <th>Shipment ID</th>
+                      <th>Shipment sent time</th>
+                      <th>Shipment received time</th>
+                      <th>Shipment status</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--Distributor-2 Ends here-->
+
+
+      <div class="clearfix"></div>
+    </section>
+    <!-- Content Section ends here--> 
+    
+  </div>
+  
+  <!-- Footer Section starts here-->
+  <footer class="footer">©  copyright 2019</footer>
+  <!-- Footer Section ends here--> 
+  
+</div>
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/bootstrap.js"></script>
+<script src="./bootstrap-notify.js"></script>	
+<script src="./sensorIOT/js/fastclick.js"></script>
+<script type="text/javascript" src="./app.js"> </script>
+<script type="text/javascript" src="./sensorIOT/js/mqttws31.js"></script>
+<script src="./sensorIOT/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+
+<script>
+
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace("active_item", "");
+        }
+
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active_item";
+      }
+
+      document.getElementById("defaultOpen").click();
+
+
+$(function() {
+    var socket = io.connect()
+
+    socket.on('chat_message', function(shipmentid, state, temp) {
+        if (state == 'Waste') {
+            $.notify({
+                icon: "fas fa-exclamation-triangle",
+                title: "<strong>Alert !!</strong> ",
+                message: 'Shipment:' + shipmentid + ' crossed the threshold temperature, last temp. recorded:' + temp
+            }, {
+                type: 'danger',
+                offset: {
+                    x: 0,
+                    y: 233
+                }
+            });
+
+            // alert('your shipment '+shipmentid+'crossed the threshold temperature, last temp. recorded:'+temp); 
+        } else {
+            $.notify({
+
+                icon: "fas fa-exclamation-triangle",
+                title: '<strong> Success!! </strong>',
+                message: 'shipment:' + shipmentid + ' reached to destination sucessfully'
+            }, {
+                type: 'success',
+                offset: {
+                    x: 0,
+                    y: 233
+                }
+            });
+            //   alert('your shipment '+shipmentid+' reached to destination sucessfully,last temp. recorded:'+temp); 
+        }
+    });
+});
+
+$(document).ready(function() {
+    // <!--  $('#dtBasicExample').DataTable();
+    //	 $('.dataTables_length').addClass('bs-select');	-->
+});
+
+function startReadIOTApp(queryRecordId, callback) {
+    angular.element(document.getElementById('query_record')).scope().startReadingTempIOT(query_record);
+    console.log('started reading temp');
+    callback();
+}
+
+function sentItemfunction(queryRecordId, callback) {
+    angular.element(document.getElementById('query_record')).scope().sentItem(query_record);
+    console.log('updating item sent');
+    callback();
+}
+
+
+function sentItem() {
+    var queryRecordId = $('#prodId').val();
+    console.log(queryRecordId);
+    sentItemfunction(queryRecordId, function() {
+        startReadIOTApp(queryRecordId, function(queryRecordId) {
+            // printList(callback);
+        });
+    });
+}
+
+</script>
+</body>
+</html>

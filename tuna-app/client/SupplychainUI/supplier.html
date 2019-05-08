@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Untitled</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="css/bootstrap-3.3.7.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="container-fluid"> 
+  
+  <!-- Header Section starts here-->
+  <header class="header_bg">
+    <div class="header_left"></div>
+    <div class="header_right"></div>
+    <div class="container">
+      <div class="logo_pharma"> <a href="#"><img src="images/logo.png" alt="logo"/></a> </div>
+      <div class="banner_text_right"> Blockchain for Business<br>
+        <b>WITH IBM BLOCKCHAIN</b> </div>
+    </div>
+  </header>
+  <!-- Header Section ends here-->
+  
+  <div class="wrapper"> 
+    
+    <!-- Content Section starts here-->
+    <section class="content_area">
+      <div class="left_submenu col-md-3">
+        <ul>
+          <li class="active_item"><a href="supplier.html">Alice (Supplier)</a></li>
+          <li><a href="distributor_1.html">Miriam (Distributor)</a></li>
+          <li><a href="distributor_2.html">Bob (Distributor)</a></li>
+        </ul>
+      </div>
+      <div class="right_content_block col-md-9">
+        <h2>Space for header text</h2>
+        <div role="tabpanel">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home1" data-toggle="tab" role="tab" aria-controls="tab1">Create new catch record</a></li>
+            <li role="presentation"><a href="#paneTwo1" data-toggle="tab" role="tab" aria-controls="tab2">Send shipment</a></li>
+            <li role="presentation"><a href="#paneTwo2" data-toggle="tab" role="tab" aria-controls="tab3">Dashboard</a></li>
+          </ul>
+          <div id="tabContent1" class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="home1">
+              <div class="info" >Please enter the following details for the new catch record</div>
+              <span class="fields_design col-md-6">
+              <label>Enter price</label>
+              <input type="text" value="EX:11$"/>
+              </span> <span class="fields_design col-md-6">
+              <label>Enter name of vessel</label>
+              <input type="text" value="EX:0239L"/>
+              </span> <span class="fields_design col-md-6">
+              <label>Enter longitude</label>
+              <input class="nonactive" type="text" value="13.052313"/>
+              </span> <span class="fields_design col-md-6">
+              <label>Enter latitude</label>
+              <input class="nonactive" type="text" value="77.624934"/>
+              </span> <span class="fields_design col-md-6">
+              <label>Please select name of distributor</label>
+              <select>
+                <option>Select</option>
+                <option value="saab">Option 1</option>
+              </select>
+              </span>
+              <div class="clearfix"></div>
+              <div class="submit_block">
+                <input type="button" value="Create" class="submit_btn_cmn"/>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="paneTwo1">
+              <div class="info" >Send the shipment for specific catch ID</div>
+              <span class="fields_design col-md-6">
+              <label>Please select name of distributor</label>
+              </span>
+              <div class="clearfix"></div>
+              <span class="fields_design col-md-6">
+              <select>
+                <option>Select</option>
+                <option value="saab">Option 1</option>
+              </select>
+              </span> <span class="fields_design col-md-6">
+              <input type="button" value="Query" class="submit_btn_cmn"/>
+              </span>
+              <div class="clearfix"></div>
+              <table width="100%">
+                <tbody>
+                  <tr>
+                    <th>Catch ID</th>
+                    <th>Catch Timestamp</th>
+                    <th>Distributor</th>
+                    <th>Status</th>
+                    <th>Vessel</th>
+                    <th>Catch location (Longitude, Latitude)</th>
+                    <th>Action</th>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="clearfix"></div>
+              <div class="submit_block">
+                <input type="button" value="Send" class="submit_btn_cmn"/>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="paneTwo2">
+              <div class="info" >Query all the catch IDs with status</div>
+              <div class="clearfix"></div>
+              <span class="fields_design col-md-6">
+              <input type="button" value="Query All" class="submit_btn_cmn"/>
+              </span>
+              <div class="clearfix"></div>
+              <table width="100%">
+                <tbody>
+                  <tr>
+                    <th>Catch ID</th>
+                    <th>Catch Timestamp</th>
+                    <th>Distributor</th>
+                    <th>Status</th>
+                    <th>Vessel</th>
+                    <th>Catch location (Longitude, Latitude)</th>
+                    <th>Shipment ID</th>
+                    <th>Shipment sent time</th>
+                    <th>Shipment received time</th>
+                    <th>Shipment status</th>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </section>
+    <!-- Content Section ends here--> 
+    
+  </div>
+  
+<div ng-if="InsurerPaitentRecord.Beneficiary_notified=='No' && InsurerPaitentRecord.InsurerVerified=='No'">
+<!-- Button trigger modal -->
+                          <input type="submit" value="Get details" id="mymodel"  data-toggle="modal">
+                          <!-- Modal -->
+                          <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                              <div class="modal-dialog modal-lg" role="document">
+                                  <div class="modal-content">
+
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLongTitle">Person Details</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                            <div class="col-md-3 floatleft">
+                                              <label class="required">Paitent ID</label>
+                                                <input id="bpaitentId" type="text" ng-model="bPaitentRecord.pid" required="true">
+                                              <label class="required">Date of Death</label>
+                                                <input type="text" ng-model="bPaitentRecord.dod" value="" required="true">
+                                            </div>
+                                            <div class="col-md-3 floatleft">
+                                              <label class="required">Person Name</label>
+                                                <input type="text" ng-model="bPaitentRecord.pname"  value="" required="true">
+                                              <label class="required">SSN</label>
+                                                <input type="text" ng-model="bPaitentRecord.SSN"  value="" required="true">
+                                            </div>
+                                            <div class="col-md-3 floatleft">
+                                                <label class="required">Member Id</label>
+                                                  <input type="text" required="true"  ng-model="bPaitentRecord.Policyno" value="">
+                                                <label class="required">Hospital</label>
+                                                  <input type="text" ng-model="bPaitentRecord.Hospital" value="" required="true">
+                                            </div>
+                                            <div class="col-md-3 floatleft">
+                                                <label class="required">Beneficiary name</label>
+                                                  <input type="text" ng-model="bPaitentRecord.Beneficiary_name" value="" required="true">
+                                                <label class="required">Beneficiary Id</label>
+                                                  <input type="text" ng-model="bPaitentRecord.bid" value="" required="true">
+                                            </div>
+                                            <div class="col-md-3 floatleft">
+                                                <label class="required">Beneficiary contact no.</label>
+                                                  <input type="text" ng-model="bPaitentRecord.bcontactno" value="" required="true">
+                                                <label class="required">Email id</label>
+                                                  <input type="text" ng-model="bPaitentRecord.bemail" value="" required="true">
+                                            </div>
+                                            <div class="col-md-3 floatleft">
+                                                  <label class="required">Insurer name</label>
+                                                    <input type="text" ng-model="bPaitentRecord.insurername" value="" required="true">
+                                                  <label class="required">Please select funeral home</label>
+                                                    <select id="bfuneralhomeId"  required="true"  class="options" ng-model="bPaitentRecord.fhome">
+                                                      <option ng-repeat="fhome in allFuneralHomes" required="true"   value="{{fhome.fhid}}+{{fhome.name}}">{{fhome.name}}</option>
+                                                    </select>     
+                                            </div>
+
+                                          <div class="col-md-3 floatleft">
+                                              <label class="required">Address</label>
+                                                <textarea ng-model="bPaitentRecord.address" required="true" value=""></textarea>
+                                          </div>
+
+                                          <div class="clearfix"></div>
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <input type="submit" value="SUBMIT" ng-click="Beneficiaryupdate(bPaitentRecord)">
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+</div>
+        
+
+
+
+
+  <!-- Footer Section starts here-->
+  <footer class="footer">©  copyright 2019</footer>
+  <!-- Footer Section ends here--> 
+  
+</div>
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

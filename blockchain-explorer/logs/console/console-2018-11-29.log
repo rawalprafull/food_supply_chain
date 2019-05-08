@@ -1,0 +1,405 @@
+postgres://hppoc:password@127.0.0.1:5432/fabricexplorer
+
+
+Please open web browser to access ：http://localhost:8080/
+
+
+pid is 669
+
+
+postgres://hppoc:password@127.0.0.1:5432/fabricexplorer
+
+Sync process is started for the network : [net_basic] and client : [org1]
+
+
+Synchronizer pid is 692
+
+
+read_set length 225
+write_set size >>>>>>>>> :  0.5008125305175781 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 9
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 3
+read_set length 118
+write_set size >>>>>>>>> :  0.5011434555053711 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 10
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 4
+cat: /home/ubuntu/prafull/Example/tuna-app: Is a directory
+read_set length 225
+write_set size >>>>>>>>> :  0.5008125305175781 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 11
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 5
+read_set length 350
+write_set size >>>>>>>>> :  0.5008134841918945 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 12
+read_set length 350
+write_set size >>>>>>>>> :  0.5008144378662109 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 13
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 6
+read_set length 225
+write_set size >>>>>>>>> :  0.5008125305175781 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 14
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 7
+read_set length 225
+write_set size >>>>>>>>> :  0.5008125305175781 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 15
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 8
+read_set length 350
+write_set size >>>>>>>>> :  0.5008134841918945 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 16
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 9
+read_set length 350
+write_set size >>>>>>>>> :  0.5008182525634766 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 17
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 10
+read_set length 350
+write_set size >>>>>>>>> :  0.5008134841918945 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 18
+read_set length 350
+write_set size >>>>>>>>> :  0.5008144378662109 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 19
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 11
+read_set length 225
+write_set size >>>>>>>>> :  0.5008125305175781 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 20
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 12
+read_set length 351
+write_set size >>>>>>>>> :  0.5008134841918945 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 21
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 13
+read_set length 351
+write_set size >>>>>>>>> :  0.5008182525634766 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 22
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 14
+read_set length 225
+write_set size >>>>>>>>> :  0.5008125305175781 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 23
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 15
+read_set length 351
+write_set size >>>>>>>>> :  0.5008134841918945 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 24
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 16
+read_set length 351
+write_set size >>>>>>>>> :  0.5008153915405273 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 25
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 17
+cat: /home/ubuntu/prafull/Example/tuna-app: Is a directory
+read_set length 350
+write_set size >>>>>>>>> :  0.5008201599121094 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 26
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 18
+read_set length 351
+write_set size >>>>>>>>> :  0.5008201599121094 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 27
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 19
+cat: /home/ubuntu/prafull/Example/tuna-app: Is a directory
+read_set length 225
+write_set size >>>>>>>>> :  0.5008134841918945 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 28
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 20
+read_set length 351
+write_set size >>>>>>>>> :  0.5008144378662109 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 29
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 21
+read_set length 351
+write_set size >>>>>>>>> :  0.500819206237793 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 30
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 22
+read_set length 225
+write_set size >>>>>>>>> :  0.5008172988891602 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 31
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 23
+read_set length 353
+write_set size >>>>>>>>> :  0.5008182525634766 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 32
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 24
+read_set length 353
+write_set size >>>>>>>>> :  0.5008230209350586 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 33
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 25
+read_set length 225
+write_set size >>>>>>>>> :  0.500819206237793 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 34
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 26
+read_set length 355
+write_set size >>>>>>>>> :  0.5008201599121094 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 35
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 27
+read_set length 355
+write_set size >>>>>>>>> :  0.5008220672607422 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 36
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 28
+read_set length 351
+write_set size >>>>>>>>> :  0.5008211135864258 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 37
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 29
+read_set length 353
+write_set size >>>>>>>>> :  0.5008249282836914 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 38
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 30
+read_set length 225
+write_set size >>>>>>>>> :  0.5008440017700195 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 39
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 31
+read_set length 225
+write_set size >>>>>>>>> :  0.5008430480957031 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 40
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 32
+read_set length 349
+write_set size >>>>>>>>> :  0.5008440017700195 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 41
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 33
+read_set length 349
+write_set size >>>>>>>>> :  0.5008487701416016 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 42
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 34
+read_set length 349
+write_set size >>>>>>>>> :  0.5008487701416016 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 43
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 35
+read_set length 349
+write_set size >>>>>>>>> :  0.5008506774902344 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 44
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 36
+read_set length 225
+write_set size >>>>>>>>> :  0.5008430480957031 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 45
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 37
+read_set length 349
+write_set size >>>>>>>>> :  0.5008440017700195 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 46
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 38
+read_set length 349
+write_set size >>>>>>>>> :  0.5008459091186523 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 47
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 39
+read_set length 225
+write_set size >>>>>>>>> :  0.5008430480957031 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 48
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 40
+read_set length 350
+write_set size >>>>>>>>> :  0.5008440017700195 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 49
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 41
+read_set length 350
+write_set size >>>>>>>>> :  0.5008487701416016 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 50
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 42
+read_set length 225
+write_set size >>>>>>>>> :  0.5008449554443359 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 51
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 43
+read_set length 350
+write_set size >>>>>>>>> :  0.5008459091186523 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 52
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 44
+read_set length 350
+write_set size >>>>>>>>> :  0.5008506774902344 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 53
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 45
+read_set length 350
+write_set size >>>>>>>>> :  0.5008506774902344 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 54
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 46
+read_set length 350
+write_set size >>>>>>>>> :  0.5008525848388672 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 55
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 47
+read_set length 225
+write_set size >>>>>>>>> :  0.5008449554443359 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 56
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 48
+read_set length 350
+write_set size >>>>>>>>> :  0.5008459091186523 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 57
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 49
+read_set length 350
+write_set size >>>>>>>>> :  0.5008478164672852 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 58
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 50
+read_set length 225
+write_set size >>>>>>>>> :  0.5008449554443359 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 59
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 51
+read_set length 350
+write_set size >>>>>>>>> :  0.5008459091186523 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 60
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 52
+read_set length 350
+write_set size >>>>>>>>> :  0.5008478164672852 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 61
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 53
+read_set length 225
+write_set size >>>>>>>>> :  0.5008449554443359 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 62
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 54
+read_set length 225
+write_set size >>>>>>>>> :  0.5008449554443359 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 63
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 55
+read_set length 350
+write_set size >>>>>>>>> :  0.5008459091186523 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 64
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 56
+read_set length 350
+write_set size >>>>>>>>> :  0.5008459091186523 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 65
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 57
+read_set length 350
+write_set size >>>>>>>>> :  0.5008506774902344 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 66
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 58
+read_set length 350
+write_set size >>>>>>>>> :  0.5008506774902344 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 67
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 59
+read_set length 350
+write_set size >>>>>>>>> :  0.5008525848388672 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 68
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 60
+read_set length 350
+write_set size >>>>>>>>> :  0.5008525848388672 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 69
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 61
+read_set length 225
+write_set size >>>>>>>>> :  0.5008440017700195 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 70
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 62
+BadRequestError: request aborted
+    at IncomingMessage.onAborted (/home/ubuntu/prafull/ExampleNew/blockchain-explorer/node_modules/raw-body/index.js:231:10)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at abortIncoming (_http_server.js:424:9)
+    at socketOnClose (_http_server.js:418:3)
+    at emitOne (events.js:121:20)
+    at Socket.emit (events.js:211:7)
+    at TCP._handle.close [as _onclose] (net.js:557:12)
+[31merror[39m: [ChannelEventHub.js]: _connect - timed out after:45000
+[31merror[39m: [ChannelEventHub.js]: _connect - timed out after:45000
+[31merror[39m: [ChannelEventHub.js]: _connect - timed out after:45000
+[31merror[39m: [ChannelEventHub.js]: _connect - timed out after:45000
+[31merror[39m: [ChannelEventHub.js]: _connect - timed out after:45000
+[31merror[39m: [ChannelEventHub.js]: _connect - timed out after:45000
+[31merror[39m: [ChannelEventHub.js]: _connect - timed out after:45000
+[31merror[39m: [ChannelEventHub.js]: _connect - timed out after:45000
