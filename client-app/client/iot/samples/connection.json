@@ -1,0 +1,96 @@
+{
+    "name": "basic-network",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Org1",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                },
+                "orderer": "300"
+            }
+        }
+    },
+    "channels": {
+        "firstchannel": {
+            "orderers": [
+                "orderer.cts.com"
+            ],
+            "peers": {
+                "peer0.org1.cts.com": {},
+                "peer0.org2.cts.com": {}
+            }
+        },
+        "secondchannel": {
+            "orderers": [
+                "orderer.cts.com"
+            ],
+            "peers": {
+                "peer0.org1.cts.com": {},
+                "peer0.org3.cts.com": {}
+            }
+        }
+    },
+    "organizations": {
+        "Org1": {
+            "mspid": "Org1MSP",
+            "peers": [
+                "peer0.org1.cts.com"
+            ],
+            "certificateAuthorities": [
+                "ca.org1.cts.com"
+            ]
+        },
+        "Org2": {
+            "mspid": "Org2MSP",
+            "peers": [
+                "peer0.org2.cts.com"
+            ],
+            "certificateAuthorities": [
+                "ca.org2.cts.com"
+            ]
+        },
+        "Org3": {
+            "mspid": "Org3MSP",
+            "peers": [
+                "peer0.org3.cts.com"
+            ],
+            "certificateAuthorities": [
+                "ca.org3.cts.com"
+            ]
+        }
+    },
+    "orderers": {
+        "orderer.cts.com": {
+            "url": "grpc://localhost:7050"
+        }
+    },
+    "peers": {
+        "peer0.org1.cts.com": {
+            "url": "grpc://localhost:7051"
+        },
+
+        "peer0.org2.cts.com": {
+            "url": "grpc://localhost:8051"
+        },
+
+        "peer0.org3.cts.com": {
+            "url": "grpc://localhost:9051"
+        }
+    },
+    "certificateAuthorities": {
+        "ca.org1.cts.com": {
+            "url": "http://localhost:7054",
+            "caName": "ca.org1.cts.com"
+        },
+        "ca.org2.cts.com": {
+            "url": "http://localhost:8054",
+            "caName": "ca.org2.cts.com"
+        },
+        "ca.org3.cts.com": {
+            "url": "http://localhost:9054",
+            "caName": "ca.org3.cts.com"
+        }
+    }
+}

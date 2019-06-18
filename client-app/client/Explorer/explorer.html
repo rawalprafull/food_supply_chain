@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Digital ID Explorer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://unpkg.com/ng-table@3.0.1/bundles/ng-table.min.css">
+    <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+    <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+    <script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ng-table@3.0.1/bundles/ng-table.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        /* Absolute Center Spinner */
+        #loading {
+            position: fixed;
+            z-index: 999;
+            height: 2em;
+            width: 2em;
+            overflow: visible;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        /* Transparent Overlay */
+        #loading:before {
+            content: '';
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* :not(:required) hides these rules from IE9 and below */
+        #loading:not(:required) {
+            /* hide "loading..." text */
+            font: 0/0 a;
+            color: transparent;
+            text-shadow: none;
+            background-color: transparent;
+            border: 0;
+        }
+
+        #loading:not(:required):after {
+            content: '';
+            display: block;
+            font-size: 10px;
+            width: 1em;
+            height: 1em;
+            margin-top: -0.5em;
+            -webkit-animation: spinner 1500ms infinite linear;
+            -moz-animation: spinner 1500ms infinite linear;
+            -ms-animation: spinner 1500ms infinite linear;
+            -o-animation: spinner 1500ms infinite linear;
+            animation: spinner 1500ms infinite linear;
+            border-radius: 0.5em;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+            box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+        }
+
+        /* Animation */
+
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @-moz-keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @-o-keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body ng-app="myModule" ng-controller="explorerApp">
+    <div id="loading" style="display: none;"></div>
+    <div class="container-fluid" ng-init="initialLoad()">
+        <!-- Header Section starts here-->
+        <header class="header_bg">
+            <div class="header_left"></div>
+            <div class="header_right"></div>
+            <div class="container">
+                <div class="logo_pharma">
+                    <a href="#"><img src="images/logo.png" alt="logo" /></a>
+                </div>
+                <div class="banner_text_right"> Blockchain for Business
+                    <br> <b>WITH IBM BLOCKCHAIN</b> </div>
+            </div>
+        </header>
+        <!-- Header Section ends here-->
+        <!-- Content Section ends here-->
+        <div class="content_section">
+            <div class="left_sec_3">
+                <h3><b>Student Digital ID </b>Explorer</h3>
+                <div class="col-md-6">
+                    <div class="wht_blk wht_blk_1"><span>NODES</span><span class="green">{{nodes}}</span><img src="images/icon_1.png"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="wht_blk wht_blk_2"><span>BLOCKS</span><span class="green">{{total_blocks}}</span><img src="images/icon_2.png"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="wht_blk wht_blk_3"><span>TRANSACTIONS</span><span class="green">{{total_txns}}</span><img src="images/icon_3.png"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="wht_blk wht_blk_4"><span>CHAINCODES</span><span class="green">{{chaincode}}</span><img src="images/icon_4.png"></div>
+                </div>
+                <div class="clearfix"></div>
+                <h3><b>BLOCK </b>view</h3>
+                <div class="col-md-12">
+                    <div class="wht_blk">
+                        <input type="text" ng-model="inputValue">
+                        <span class="group">
+                            <input type="radio" id="rad1" name="radio-group_1" ng-model="selectedOpt" value="Block" checked>
+                            <label for="rad1">Block</label>
+                            <input type="radio" id="rad2" name="radio-group_1" ng-model="selectedOpt" value="Transaction">
+                            <label for="rad2">Transaction</label>
+                        </span><br>
+                        <input type="submit" value="Get Details" ng-click="find()" />
+                    </div>
+                </div>
+            </div>
+            <div class="right_sec_3">
+                <h3><b>BLOCK # <span class="grn"> {{current_block_no}}</span></b></h3>
+                <div class="col-md-12">
+                    <div class="wht_blk blockno" style="border-top: 7px solid cornflowerblue;">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr ng-show="applicantDetails">
+                                    <td><a href="#" ng-click="Back()"><img src="images/prev.png" style="float: left;"></a></td>
+                                    <td colspan="2" class="title" style="padding-right: 200px;"><img src="images/icon_6.png">Applicant Details</td>
+                                    <td><a href="#" ng-click="Forward()"><img src="images/next.png" style="float: right;"></a></td>
+                                </tr>
+                                <tr ng-show="assessmentDetails">
+                                    <td><a href="#" ng-click="Back()"><img src="images/prev.png" style="float: left;"></a></td>
+                                    <td colspan="2" class="title" style="padding-right: 200px;"><img src="images/icon_7.png">Assessment Details</td>
+                                    <td><a href="#" ng-click="Forward()"><img src="images/next.png" style="float: right;"></a></td>
+                                </tr>
+                                <tr ng-show="universityDetails">
+                                    <td><a href="#" ng-click="Back()"><img src="images/prev.png" style="float: left;"></a></td>
+                                    <td colspan="2" class="title" style="padding-right: 200px;"><img src="images/icon_8.png">University Details</td>
+                                    <td><a href="#" ng-click="Forward()"><img src="images/next.png" style="float: right;"></a></td>
+                                </tr>
+                                <tr ng-show="semesterDetails">
+                                    <td><a href="#" ng-click="Back()"><img src="images/prev.png" style="float: left;"></a></td>
+                                    <td colspan="2" class="title" style="padding-right: 200px;"><img src="images/icon_9.png">Semester Certificate Details</td>
+                                    <td><a href="#" ng-click="Forward()"><img src="images/next.png" style="float: right;"></a></td>
+                                </tr>
+                                <tr ng-show="finalDegreeCertDetails">
+                                    <td><a href="#" ng-click="Back()"><img src="images/prev.png" style="float: left;"></a></td>
+                                    <td colspan="2" class="title" style="padding-right: 200px;"><img src="images/icon_5.png">Degree Certificate Details</td>
+                                    <td><a href="#" ng-click="Forward()"><img src="images/next.png" style="float: right;"></a></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="subtitle"><b>{{txnMsg}}</b></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Transaction By</b></td>
+                                    <td class="blue"><b>{{txn_creator}}</b></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Transaction Id</b></td>
+                                    <td class="blue"><b>{{txnId}}</b></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Current Block Hash</b></td>
+                                    <td class="blue"><b>{{currentDataHash}}</b></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Previous Block Hash</b></td>
+                                    <td class="blue"><b>{{previousDataHash}}</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <h3 style="padding-top: 5px;"><b>Peer </b>List</h3>
+                <div class="col-md-12">
+                    <div class="wht_blk peer">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Org</th>
+                                    <th scope="col">MSP</th>
+                                    <th scope="col">Port Number</th>
+                                </tr>
+                                <tr ng-repeat="x in peers">
+                                    <td><b>{{x.peerName}}</b></td>
+                                    <td><b>{{x.organization}}</b></td>
+                                    <td><b>{{x.mspId}}</b></td>
+                                    <td><b>{{x.portNo}}</b></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The Block Modal -->
+        <div class="container">
+            <!-- The Modal -->
+            <div class="modal" id="blockModal">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-center" style="background-color: blue;">
+                            <h3 class="modal-title" style="color: white; text-transform: uppercase;"><b>Block Details</b></h3>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body blockno">
+                            <div class="container">
+                                <table width="70%" border="0">
+                                    <tbody>
+                                        <tr ng-show="blockApplicantDetails">
+                                            <td colspan="2" class="title"><img src="images/icon_6.png">Applicant Details</td>
+                                        </tr>
+                                        <tr ng-show="blockAssessmentDetails">
+                                            <td colspan="2" class="title"><img src="images/icon_7.png">Assessment Details</td>
+                                        </tr>
+                                        <tr ng-show="blockUniversityDetails">
+                                            <td colspan="2" class="title"><img src="images/icon_8.png">University Details</td>
+                                        </tr>
+                                        <tr ng-show="blockSemesterDetails">
+                                            <td colspan="2" class="title"><img src="images/icon_9.png">Semester Certificate Details</td>
+                                        </tr>
+                                        <tr ng-show="blockFinalDegreeCertDetails">
+                                            <td colspan="2" class="title"><img src="images/icon_5.png">Degree Certificate Details</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="subtitle"><b>{{txnMsg}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Transaction By</b></td>
+                                            <td class="blue"><b>{{txn_creator}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Transaction Id</b></td>
+                                            <td class="blue"><b>{{txnId}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Current Block Hash</b></td>
+                                            <td class="blue"><b>{{currentDataHash}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Previous Block Hash</b></td>
+                                            <td class="blue"><b>{{previousDataHash}}</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The Transaction Modal -->
+        <div class="container">
+            <!-- The Modal -->
+            <div class="modal" id="txnModal">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-center" style="background-color: blue;">
+                            <h3 class="modal-title" style="color: white; text-transform: uppercase;"><b>Transaction Details</b></h3>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body blockno">
+                            <div class="container">
+                                <table width="70%" border="0">
+                                    <tbody>
+                                        <tr ng-show="txnApplicantDetails">
+                                            <td colspan="2" class="title"><img src="images/icon_6.png">Applicant Details</td>
+                                        </tr>
+                                        <tr ng-show="txnAssessmentDetails">
+                                            <td colspan="2" class="title"><img src="images/icon_7.png">Assessment Details</td>
+                                        </tr>
+                                        <tr ng-show="txnUniversityDetails">
+                                            <td colspan="2" class="title"><img src="images/icon_8.png">University Details</td>
+                                        </tr>
+                                        <tr ng-show="txnSemesterDetails">
+                                            <td colspan="2" class="title"><img src="images/icon_9.png">Semester Certificate Details</td>
+                                        </tr>
+                                        <tr ng-show="txnFinalDegreeCertDetails">
+                                            <td colspan="2" class="title"><img src="images/icon_5.png">Degree Certificate Details</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="subtitle"><b>{{txnMsg}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Transaction By</b></td>
+                                            <td class="blue"><b>{{txn_creator}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Transaction Timestamp</b></td>
+                                            <td class="blue"><b>{{create_timestamp}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Transaction Id</b></td>
+                                            <td class="blue"><b>{{txnId}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Payload Proposal Hash</b></td>
+                                            <td class="blue"><b>{{payload_hash}}</b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content Section ends here-->
+        <!-- Footer Section starts here-->
+        <footer class="footer">© Copyright 2018</footer>
+        <!-- Footer Section ends here-->
+    </div>
+</body>
+
+</html>

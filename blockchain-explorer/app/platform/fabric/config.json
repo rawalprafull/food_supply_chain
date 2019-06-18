@@ -1,0 +1,166 @@
+{
+  "network-configs": {
+    "network-1": {
+      "version": "1.0",
+      "clients": {
+        "client-1": {
+          "tlsEnable": false,
+          "organization": "Org1",
+          "channel": "secondchannel",
+          "credentialStore": {
+            "path": "./tmp/credentialStore_Org1/credential",
+            "cryptoStore": {
+              "path": "./tmp/credentialStore_Org1/crypto"
+            }
+          }
+        }
+      },
+      "channels": {
+        "firstchannel": {
+          "peers": {
+            "peer0.org1.cts.com": {},
+            "peer0.org2.cts.com": {}
+          },
+          "connection": {
+            "timeout": {
+              "peer": {
+                "endorser": "6000",
+                "eventHub": "6000",
+                "eventReg": "6000"
+              }
+            }
+          }
+        },
+        "secondchannel": {
+          "peers": {
+            "peer0.org1.cts.com": {},
+            "peer0.org3.cts.com": {}
+          },
+          "connection": {
+            "timeout": {
+              "peer": {
+                "endorser": "6000",
+                "eventHub": "6000",
+                "eventReg": "6000"
+              }
+            }
+          }
+        }
+      },
+      "organizations": {
+        "Org1": {
+          "mspid": "Org1MSP",
+          "fullpath": false,
+          "adminPrivateKey": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org1.cts.com/users/Admin@org1.cts.com/msp/keystore"
+          },
+          "signedCert": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org1.cts.com/users/Admin@org1.cts.com/msp/signcerts"
+          },
+          "certificateAuthorities": ["ca.org1.cts.com"],
+          "peers": ["peer0.org1.cts.com"]
+        },
+        "Org2": {
+          "mspid": "Org2MSP",
+          "adminPrivateKey": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org2.cts.com/users/Admin@org2.cts.com/msp/keystore"
+          },
+          "signedCert": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org2.cts.com/users/Admin@org2.cts.com/msp/signcerts"
+          },
+          "certificateAuthorities": ["ca.org2.cts.com"],
+          "peers": ["peer0.org2.cts.com"]
+        },
+        "Org2": {
+          "mspid": "Org3MSP",
+          "adminPrivateKey": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org3.cts.com/users/Admin@org3.cts.com/msp/keystore"
+          },
+          "signedCert": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org3.cts.com/users/Admin@org3.cts.com/msp/signcerts"
+          },
+          "certificateAuthorities": ["ca.org3.cts.com"],
+          "peers": ["peer0.org3.cts.com"]
+        },
+        "OrdererMSP": {
+          "mspid": "OrdererMSP",
+          "adminPrivateKey": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/ordererOrganizations/cts.com/users/Admin@cts.com/msp/keystore"
+          }
+        }
+      },
+      "peers": {
+        "peer0.org1.cts.com": {
+          "tlsCACerts": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org1.cts.com/peers/peer0.org1.cts.com/tls/ca.crt"
+          },
+          "url": "grpc://localhost:7051",
+          "eventUrl": "grpc://localhost:7053",
+          "grpcOptions": {
+            "ssl-target-name-override": "peer0.org1.cts.com"
+          }
+        },
+        "peer0.org2.cts.com": {
+          "tlsCACerts": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org2.cts.com/peers/peer0.org2.cts.com/tls/ca.crt"
+          },
+          "url": "grpc://localhost:8051",
+          "eventUrl": "grpc://localhost:8053",
+          "grpcOptions": {
+            "ssl-target-name-override": "peer0.org2.cts.com"
+          }
+        },
+        "peer0.org3.cts.com": {
+          "tlsCACerts": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org3.cts.com/peers/peer0.org3.cts.com/tls/ca.crt"
+          },
+          "url": "grpc://localhost:9051",
+          "eventUrl": "grpc://localhost:9053",
+          "grpcOptions": {
+            "ssl-target-name-override": "peer0.org3.cts.com"
+          }
+        }
+      },
+      "orderers": {
+        "orderer.cts.com": {
+          "url": "grpc://localhost:7050"
+        }
+      },
+      "certificateAuthorities": {
+        "ca.org1.cts.com": {
+          "url": "http://localhost:7054",
+          "httpOptions": {
+            "verify": false
+          },
+          "tlsCACerts": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org1.cts.com/ca/ca.org1.cts.com-cert.pem"
+          },
+          "caName": "ca.org1.cts.com"
+        },
+        "ca.org2.cts.com": {
+          "url": "http://localhost:8054",
+          "httpOptions": {
+            "verify": false
+          },
+          "tlsCACerts": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org2.cts.com/ca/ca.org2.cts.com-cert.pem"
+          },
+          "caName": "ca.org2.cts.com"
+        },
+        "ca.org3.cts.com": {
+          "url": "http://localhost:9054",
+          "httpOptions": {
+            "verify": false
+          },
+          "tlsCACerts": {
+            "path": "/home/ubuntu/food_supply_chain/basic-network/crypto-config/peerOrganizations/org3.cts.com/ca/ca.org3.cts.com-cert.pem"
+          },
+          "caName": "ca.org2.cts.com"
+        }
+      }
+    },
+    "network-2": {}
+  },
+  "configtxgenToolPath": "~/fabric-samples/bin",
+  "license": "Apache-2.0"
+}
