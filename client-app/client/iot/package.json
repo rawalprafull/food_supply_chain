@@ -4,7 +4,7 @@
         "main": "dist/iotf-client.js",
         "dependencies": {
                 "express": "^4.11.0",
-                "axios": "^0.5.4",
+                "axios": "^0.21.1",
                 "bluebird": "^2.9.34",
                 "btoa": "^1.1.2",
                 "concat-stream": "^1.6.0",
