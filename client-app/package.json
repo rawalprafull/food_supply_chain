@@ -19,7 +19,7 @@
         "ng-table": "^0.5.4",
         "notifyjs": "^3.0.0",
         "pg": "^7.0.3",
-        "socket.io": "^2.2.0",
+        "socket.io": "^2.5.0",
         "stringstream": "^1.0.0"
     },
     "license": "Apache-2.0",
