@@ -11,7 +11,7 @@
         "cloudant": "^1.10.0-NOTICE",
         "deep-extend": "^0.6.0",
         "ejs": "latest",
-        "express": "^4.16.4",
+        "express": "^4.17.3",
         "fabric-ca-client": "1.2.0",
         "fabric-client": "1.2.2",
         "fabric-network": "^1.4.1",
